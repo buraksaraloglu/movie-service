@@ -1,4 +1,4 @@
-import { union, object, string, date } from 'zod';
+import { object, string } from 'zod';
 
 export const requireUserSchema = object({
   headers: object({

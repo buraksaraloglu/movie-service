@@ -7,10 +7,10 @@ const options: swaggerJsdoc.Options = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'Movies Service',
+      title: 'Movie Service',
       version: '0.1.0',
       description:
-        'Movies Service is a microservice that provides a REST API for movies',
+        'Movie Service is a microservice that provides a REST API for movies',
       contact: {
         name: 'Burak Saraloglu',
         url: 'https://buraksaraloglu.com',
