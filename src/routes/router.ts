@@ -5,8 +5,7 @@ import movieRouter from './movie';
 
 const router = express.Router();
 
-// TODO: Could've implement a versioning scheme to allow for multiple versions of the API
-router.use('/health', healthRouter);
+router.use('v1/api/health', healthRouter);
 router.use('/movie', movieRouter);
 
 export default function initRouter(app: express.Application) {
