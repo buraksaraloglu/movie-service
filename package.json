@@ -1,7 +1,7 @@
 {
-  "name": "movies-auth-service",
+  "name": "movies-service",
   "version": "0.0.0",
-  "description": "Movies Auth Service",
+  "description": "Movies Service",
   "engines": {
     "node": ">= 16.13 <17"
   },
@@ -12,7 +12,6 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.2",
-    "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.5.2",
     "pino": "^8.4.0",
     "pino-pretty": "^9.0.0",
@@ -25,7 +24,6 @@
     "@types/bcrypt": "^5.0.0",
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
-    "@types/jsonwebtoken": "^8.5.8",
     "@types/node": "~17.0.5",
     "nodemon": "^2.0.15",
     "npm-run-all": "^4.1.5",
