@@ -46,7 +46,7 @@ npm test
 ```bash
 # GET /movie
 
-curl --location --request GET 'http://localhost:5000/movie' \
+curl --location --request GET '<service-uri>/movie' \
   --header 'user: <userId>' \
 ```
 
@@ -55,7 +55,7 @@ curl --location --request GET 'http://localhost:5000/movie' \
 ```bash
 # GET /movie/:movieId
 
-curl --location --request GET 'http://localhost:5000/movie/:movieId' \
+curl --location --request GET '<service-uri>/movie/:movieId' \
   --header 'user: <userId>' \
 ```
 
