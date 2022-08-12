@@ -1,6 +1,10 @@
 import { FilterQuery, UpdateQuery } from 'mongoose';
 
-import MovieModel, { MovieDocument, MovieInput } from '@/models/Movie';
+import MovieModel, {
+  MovieDocument,
+  MovieInput,
+  UpdateMovieInput,
+} from '@/models/Movie';
 
 export const getAllMovies = async (
   userId: string,
@@ -61,7 +65,7 @@ export const updateMovie = async ({
 }: {
   userId: string;
   movieId: string;
-  movie: MovieInput;
+  movie: UpdateMovieInput;
 }): Promise<MovieDocument> => {
   const query: FilterQuery<MovieDocument> = {
     createdBy: userId,

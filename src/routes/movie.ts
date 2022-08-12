@@ -11,6 +11,7 @@ import {
   createMovieSchema,
   getMovieSchema,
   requireUserSchema,
+  updateMovieSchema,
 } from '@/schema/movie.schema';
 
 const router = express.Router();
@@ -25,7 +26,7 @@ router.post(
 );
 router.put(
   '/:id',
-  validateResource(createMovieSchema),
+  validateResource(updateMovieSchema),
   validateResource(requireUserSchema),
   updateMovieController,
 );

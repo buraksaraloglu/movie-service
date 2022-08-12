@@ -54,6 +54,19 @@ export const createMovieSchema = object({
   }),
 });
 
+export const updateMovieSchema = object({
+  body: object({
+    name: string({
+      description: 'Name of the movie',
+      required_error: 'Name is required',
+    }).optional(),
+    releaseDate: string({
+      required_error: 'Release Date is required',
+      description: 'Release date of the movie',
+    }).optional(),
+  }),
+});
+
 export const getMovieSchema = object({
   params: object({
     id: string({

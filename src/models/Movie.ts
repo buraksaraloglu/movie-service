@@ -5,6 +5,11 @@ export interface MovieInput {
   releaseDate: string;
 }
 
+export interface UpdateMovieInput {
+  name?: string;
+  releaseDate?: string;
+}
+
 export interface MovieDocument extends MovieInput, Document {
   createdBy: string;
   createdAt: Date;
