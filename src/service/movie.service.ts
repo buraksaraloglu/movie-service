@@ -71,10 +71,11 @@ export const updateMovie = async ({
     createdBy: userId,
     _id: movieId,
   };
+
   const update: UpdateQuery<MovieInput> = {
     $set: {
       ...movie,
-      releaseDate: new Date(movie.releaseDate),
+      releaseDate: movie.releaseDate ? new Date(movie.releaseDate) : undefined,
     },
   };
 
