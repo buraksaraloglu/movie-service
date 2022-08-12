@@ -19,11 +19,23 @@ const getUserIdFromRequest = (req: Request) => {
 };
 
 export const getAllMoviesController = async (req: Request, res: Response) => {
-  const userId = getUserIdFromRequest(req);
+  try {
+    const userId = getUserIdFromRequest(req);
+    const limit =
+      typeof req.query.limit === 'string' ? parseInt(req.query.limit, 10) : 20;
+    const skip =
+      typeof req.query.skip === 'string' ? parseInt(req.query.skip, 10) : 0;
 
-  const movies = await getAllMovies(userId);
+    if (limit > 1000) {
+      throw new Error('[getAllMoviesController]: Limit is too high');
+    }
 
-  return res.status(200).send(movies);
+    const movies = await getAllMovies(userId, { limit, skip });
+
+    return res.status(200).send(movies);
+  } catch (error) {
+    return res.status(400).send(error.message);
+  }
 };
 
 export const getMovieByIdController = async (req: Request, res: Response) => {
